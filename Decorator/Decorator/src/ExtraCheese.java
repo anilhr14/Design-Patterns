@@ -1,12 +1,11 @@
-public class ExtraCheese extends BasePizza{
-    BasePizza basePizza;
+public class ExtraCheese extends PizzaDecorator{
 
     public ExtraCheese(BasePizza basePizza){
-        this.basePizza = basePizza;
+        super(basePizza);
     }
 
     @Override
     public int cost() {
-        return this.basePizza.cost() + 10;
+        return super.cost() + 10;
     }
 }
